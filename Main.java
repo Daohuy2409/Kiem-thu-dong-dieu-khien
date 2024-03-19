@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    static int findSmallestPositive(int[] arr) {
+    static int smallestPositive(int[] arr) {
         int min = -1;
         for(int i = 0; i < arr.length; i++) {
             if (arr[i] > 0) {
@@ -26,12 +26,7 @@ public class Main {
         if (sc.hasNextInt()) {
             arr_size = sc.nextInt();
         }
-
-        // Initialize the array's
-        // size using user input
         int[] arr = new int[arr_size];
-
-        // Take user elements for the array
         System.out.println(
                 "Enter the elements of the array: ");
         for (int i = 0; i < arr_size; i++) {
@@ -39,7 +34,7 @@ public class Main {
                 arr[i] = sc.nextInt();
             }
         }
-        int smallestPositive = findSmallestPositive(arr);
+        int smallestPositive = smallestPositive(arr);
         if (smallestPositive == -1) {
             System.out.println("No positive number found in the array");
         } else {
